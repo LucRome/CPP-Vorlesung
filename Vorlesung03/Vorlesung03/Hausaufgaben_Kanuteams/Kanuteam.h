@@ -10,14 +10,15 @@ class Kanuteam :
 	public IdAndName
 {
 public:
-	Kanuteam(std::string name, Boat* boat);
+	Kanuteam(std::string name, Boat* boat = nullptr);
 	~Kanuteam() override;
 	void printInfos()  const override;
 	void addMember(Person* person); //mit alias?
+	void addBoat(Boat* boat);
 
 
 protected:
-	Boat* const m_boat;
+	Boat* m_boat;
 	std::vector<Person*> m_members;
 
 private:

@@ -3,8 +3,8 @@
 
 Kanuteam::Kanuteam(std::string name, Boat* boat)
 	:IdAndName(name)
-	,m_boat(boat)
 {
+	m_boat = boat;
 }
 
 Kanuteam::~Kanuteam()
@@ -24,4 +24,9 @@ void Kanuteam::addMember(Person* person)
 		m_members.push_back(person);
 	}
 	
+}
+
+void Kanuteam::addBoat(Boat* boat)
+{
+	m_boat = boat;
 }

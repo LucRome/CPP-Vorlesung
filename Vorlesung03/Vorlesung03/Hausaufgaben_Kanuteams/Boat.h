@@ -8,11 +8,12 @@ class Boat :
 	public IdAndName
 {
 public:
-	Boat(std::string name, Kanuteam* kanuteam);
+	Boat(std::string name, Kanuteam* kanuteam = nullptr);
 	~Boat() override;
 	void printInfos() const override;
+	void setKanuteam(Kanuteam* kanuteam);
 
 protected:
-	Kanuteam* const m_Kanuteam;
+	Kanuteam* m_Kanuteam;
 };
 
