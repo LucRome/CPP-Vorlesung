@@ -18,6 +18,18 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Boat.cpp" />
+    <ClCompile Include="IdAndName.cpp" />
+    <ClCompile Include="Kanuteam.cpp" />
+    <ClCompile Include="Person.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Boat.h" />
+    <ClInclude Include="IdAndName.h" />
+    <ClInclude Include="Kanuteam.h" />
+    <ClInclude Include="Person.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{2E1DE0C1-0ADA-47B3-835A-DAFE57B79E78}</ProjectGuid>
@@ -137,8 +149,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
