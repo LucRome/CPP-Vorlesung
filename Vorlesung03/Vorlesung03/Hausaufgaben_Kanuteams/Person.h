@@ -11,7 +11,8 @@ public:
 
 	void printInfos();
 	void addKanuteam(Kanuteam* kanuteam);
-	bool is_moreKanusPossible() const;
+	void addKanuteam_noTest(Kanuteam* kanuteam);
+	bool is_moreKanuteamsPossible() const;
 
 protected:
 	std::vector<Kanuteam*> m_kanuteams;

@@ -40,8 +40,9 @@ void Kanuteam::printInfos() const
 
 void Kanuteam::addMember(Person* person)
 {
-	if (is_moreMembersPossible() && person->is_moreKanusPossible()) {
+	if (is_moreMembersPossible() && person->is_moreKanuteamsPossible()) {
 		m_members.push_back(person);
+		person->addKanuteam_noTest(this);
 	}
 	else {
 		std::cout << "Already enough members or Person already has enough teams" << std::endl;
@@ -52,10 +53,21 @@ void Kanuteam::setBoat(Boat* boat)
 {
 	if (!is_boatSet() && !boat->is_KanuteamSet()) {
 		m_boat = boat;
+		boat->setKanuteam_noTest(this);
 	}
 	else {
 		std::cout << "Error: Boat already has a Team or Team already has a boat" << std::endl;
 	}
+}
+
+void Kanuteam::addMember_noTest(Person* person)
+{
+	m_members.push_back(person);
+}
+
+void Kanuteam::setBoat_noTest(Boat* boat)
+{
+	m_boat = boat;
 }
 
 bool Kanuteam::is_moreMembersPossible() const

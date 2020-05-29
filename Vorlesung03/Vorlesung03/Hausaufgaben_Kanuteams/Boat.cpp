@@ -23,10 +23,16 @@ void Boat::setKanuteam(Kanuteam* kanuteam)
 {
 	if (!is_KanuteamSet() && !kanuteam->is_boatSet()) {
 		m_Kanuteam = kanuteam;
+		kanuteam->setBoat_noTest(this);
 	}
 	else {
-
+		std::cout << "Kanuteam hat ein Boot oder Boot hat ein Kanuteam" << std::endl;
 	}
+}
+
+void Boat::setKanuteam_noTest(Kanuteam* kanuteam)
+{
+	m_Kanuteam = kanuteam;
 }
 
 bool Boat::is_KanuteamSet()

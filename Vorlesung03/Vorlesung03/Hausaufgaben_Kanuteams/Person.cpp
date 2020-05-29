@@ -25,16 +25,21 @@ void Person::printInfos()
 
 void Person::addKanuteam(Kanuteam* kanuteam)
 {
-	if (m_kanuteams.size < max_Kanuteams && ) {
+	if (is_moreKanuteamsPossible() && kanuteam->is_moreMembersPossible()) {
 		m_kanuteams.push_back(kanuteam);
-		kanuteam->addMember(this);
+		kanuteam->addMember_noTest(this);
 	}
 	else {
 		std::cout << "Zu viele Teams oder Team hat genug Member" << std::endl;
 	}
 }
 
-bool Person::is_moreKanusPossible() const
+void Person::addKanuteam_noTest(Kanuteam* kanuteam)
+{
+	m_kanuteams.push_back(kanuteam);
+}
+
+bool Person::is_moreKanuteamsPossible() const
 {
 	return (m_kanuteams.size < max_Kanuteams);
 }

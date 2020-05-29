@@ -23,12 +23,14 @@
     <ClCompile Include="IdAndName.cpp" />
     <ClCompile Include="Kanuteam.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Boat.h" />
     <ClInclude Include="IdAndName.h" />
     <ClInclude Include="Kanuteam.h" />
     <ClInclude Include="Person.h" />
+    <ClInclude Include="Test.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
