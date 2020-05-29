@@ -3,6 +3,8 @@
 #include "Person.h"
 #include <iostream>
 
+const int Kanuteam::max_Members = 5;
+
 Kanuteam::Kanuteam(std::string name, Boat* boat)
 	:IdAndName(name)
 {
@@ -26,7 +28,7 @@ void Kanuteam::printInfos() const
 	}
 }
 
-void Kanuteam::setMembers(std::vector<Person*> members)
+/*void Kanuteam::setMembers(std::vector<Person*> members)
 {
 	if (members.size <= max_Members) {
 		m_members = members;
@@ -34,17 +36,36 @@ void Kanuteam::setMembers(std::vector<Person*> members)
 	else {
 		std::cout << "Zu viele Mitglieder" << std::endl;
 	}
-}
+}*/
 
 void Kanuteam::addMember(Person* person)
 {
-	if (m_members.size < Kanuteam::max_Members) {
+	if (is_moreMembersPossible() && person->is_moreKanusPossible()) {
 		m_members.push_back(person);
 	}
-	
+	else {
+		std::cout << "Already enough members or Person already has enough teams" << std::endl;
+	}
 }
 
-void Kanuteam::addBoat(Boat* boat)
+void Kanuteam::setBoat(Boat* boat)
 {
-	m_boat = boat;
+	if (!is_boatSet() && !boat->is_KanuteamSet()) {
+		m_boat = boat;
+	}
+	else {
+		std::cout << "Error: Boat already has a Team or Team already has a boat" << std::endl;
+	}
+}
+
+bool Kanuteam::is_moreMembersPossible() const
+{
+	return (m_members.size < max_Members);
+}
+
+bool Kanuteam::is_boatSet() const
+{
+	bool ibs;
+	m_boat == nullptr ? ibs = false : ibs = true;
+	return ibs;
 }

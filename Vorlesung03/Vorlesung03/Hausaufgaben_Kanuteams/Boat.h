@@ -12,6 +12,7 @@ public:
 	~Boat() override;
 	void printInfos() const override;
 	void setKanuteam(Kanuteam* kanuteam);
+	bool is_KanuteamSet();
 
 protected:
 	Kanuteam* m_Kanuteam;

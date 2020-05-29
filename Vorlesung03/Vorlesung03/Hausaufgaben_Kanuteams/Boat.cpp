@@ -21,5 +21,15 @@ void Boat::printInfos() const
 
 void Boat::setKanuteam(Kanuteam* kanuteam)
 {
-	m_Kanuteam = kanuteam;
+	if (!is_KanuteamSet() && !kanuteam->is_boatSet()) {
+		m_Kanuteam = kanuteam;
+	}
+	else {
+
+	}
+}
+
+bool Boat::is_KanuteamSet()
+{
+	return m_Kanuteam;
 }
