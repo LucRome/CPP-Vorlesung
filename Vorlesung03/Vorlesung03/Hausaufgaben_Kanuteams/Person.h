@@ -12,6 +12,7 @@ public:
 	void printInfos();
 	void addKanuteam(Kanuteam* kanuteam);
 	void addKanuteam_noTest(Kanuteam* kanuteam);
+	void removeKanuteam(Kanuteam* kanuteam);
 	bool is_moreKanuteamsPossible() const;
 
 protected:

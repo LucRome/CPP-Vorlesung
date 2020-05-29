@@ -7,11 +7,12 @@ class IdAndName
 public:
 	IdAndName(std::string name);
 	virtual ~IdAndName();
+
 	int getId() const;
 	std::string getName() const;
 
 	virtual void printInfos() const;
-
+	
 
 
 protected:

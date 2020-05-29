@@ -54,4 +54,8 @@ void Test::testFunktion()
 	b2->printInfos();
 	b3->printInfos();
 
+
+	delete p1;
+
+	k1->printInfos();
 }

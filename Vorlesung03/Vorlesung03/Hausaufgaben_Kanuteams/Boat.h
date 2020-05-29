@@ -13,6 +13,7 @@ public:
 	void printInfos() const override;
 	void setKanuteam(Kanuteam* kanuteam);
 	void setKanuteam_noTest(Kanuteam* kanuteam);
+	void removeKanuteam();
 	bool is_KanuteamSet();
 
 protected:

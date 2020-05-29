@@ -10,6 +10,9 @@ Boat::Boat(std::string name, Kanuteam* kanuteam)
 
 Boat::~Boat()
 {
+	if (m_Kanuteam) {
+		m_Kanuteam->removeBoat();
+	}
 }
 
 void Boat::printInfos() const
@@ -33,6 +36,11 @@ void Boat::setKanuteam(Kanuteam* kanuteam)
 void Boat::setKanuteam_noTest(Kanuteam* kanuteam)
 {
 	m_Kanuteam = kanuteam;
+}
+
+void Boat::removeKanuteam()
+{
+	m_Kanuteam = nullptr;
 }
 
 bool Boat::is_KanuteamSet()

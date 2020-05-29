@@ -13,6 +13,12 @@ Kanuteam::Kanuteam(std::string name, Boat* boat)
 
 Kanuteam::~Kanuteam()
 {
+	if (m_boat) {
+		m_boat->removeKanuteam();
+	}
+	for (Person* p : m_members) {
+		p->removeKanuteam(this);
+	}
 }
 
 void Kanuteam::printInfos() const
@@ -65,9 +71,24 @@ void Kanuteam::addMember_noTest(Person* person)
 	m_members.push_back(person);
 }
 
+void Kanuteam::removeMember(Person* person)
+{
+	for (int i = 0; i < m_members.size(); i++) {
+		if (m_members[i] == person) {
+			m_members.erase(m_members.begin()+i);
+			break;
+		}
+	}
+}
+
 void Kanuteam::setBoat_noTest(Boat* boat)
 {
 	m_boat = boat;
+}
+
+void Kanuteam::removeBoat()
+{
+	m_boat = nullptr;
 }
 
 bool Kanuteam::is_moreMembersPossible() const

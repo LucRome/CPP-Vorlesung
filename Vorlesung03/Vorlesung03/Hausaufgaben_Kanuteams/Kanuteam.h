@@ -18,7 +18,9 @@ public:
 	void addMember(Person* person); //mit alias?
 	void setBoat(Boat* boat);
 	void addMember_noTest(Person* person);
+	void removeMember(Person* person);	
 	void setBoat_noTest(Boat* boat);
+	void removeBoat();
 	bool is_moreMembersPossible() const;
 	bool is_boatSet() const;
 
