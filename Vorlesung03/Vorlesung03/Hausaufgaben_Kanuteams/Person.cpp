@@ -41,5 +41,5 @@ void Person::addKanuteam_noTest(Kanuteam* kanuteam)
 
 bool Person::is_moreKanuteamsPossible() const
 {
-	return (m_kanuteams.size < max_Kanuteams);
+	return (m_kanuteams.size() < max_Kanuteams);
 }

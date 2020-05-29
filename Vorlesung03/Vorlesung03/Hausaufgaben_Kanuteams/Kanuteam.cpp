@@ -20,11 +20,11 @@ void Kanuteam::printInfos() const
 	std::cout << "----------------" << std::endl << "Kanuteam: " << std::endl;
 	IdAndName::printInfos();
 	if (m_boat) {
-		std::cout << "Kanu: " << m_boat->getName << std::endl;
+		std::cout << "Kanu: " << m_boat->getName() << std::endl;
 	}
 	std::cout << "Members: " << std::endl;
 	for(Person * const person : m_members) {
-		std::cout << person->getName();
+		std::cout << person->getName() << std::endl;
 	}
 }
 
@@ -72,7 +72,7 @@ void Kanuteam::setBoat_noTest(Boat* boat)
 
 bool Kanuteam::is_moreMembersPossible() const
 {
-	return (m_members.size < max_Members);
+	return (m_members.size() < max_Members);
 }
 
 bool Kanuteam::is_boatSet() const

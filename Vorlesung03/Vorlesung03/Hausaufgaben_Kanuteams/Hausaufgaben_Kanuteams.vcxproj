@@ -23,6 +23,7 @@
     <ClCompile Include="IdAndName.cpp" />
     <ClCompile Include="Kanuteam.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="Program.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
