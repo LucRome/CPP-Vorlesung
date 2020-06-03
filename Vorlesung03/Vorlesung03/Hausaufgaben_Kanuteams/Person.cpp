@@ -12,7 +12,7 @@ Person::Person(std::string name)
 Person::~Person()
 {
 	for (Kanuteam* k : m_kanuteams) {
-		k->removeMember(this);
+		k->removeElement(this);
 	}
 }
 
@@ -26,7 +26,7 @@ void Person::printInfos()
 	}
 }
 
-void Person::addKanuteam(Kanuteam* kanuteam)
+void Person::addElement(Kanuteam* kanuteam)
 {
 	if (is_moreKanuteamsPossible() && kanuteam->is_moreMembersPossible()) {
 		m_kanuteams.push_back(kanuteam);
@@ -42,7 +42,7 @@ void Person::addKanuteam_noTest(Kanuteam* kanuteam)
 	m_kanuteams.push_back(kanuteam);
 }
 
-void Person::removeKanuteam(Kanuteam* kanuteam)
+void Person::removeElement(Kanuteam* kanuteam)
 {
 	for (int i = 0; i < m_kanuteams.size(); i++) {
 		if (m_kanuteams[i] == kanuteam) {

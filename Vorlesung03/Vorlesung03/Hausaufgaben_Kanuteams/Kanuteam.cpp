@@ -14,10 +14,10 @@ Kanuteam::Kanuteam(std::string name, Boat* boat)
 Kanuteam::~Kanuteam()
 {
 	if (m_boat) {
-		m_boat->removeKanuteam();
+		m_boat->removeElement(this);
 	}
 	for (Person* p : m_members) {
-		p->removeKanuteam(this);
+		p->removeElement(this);
 	}
 }
 
@@ -27,6 +27,9 @@ void Kanuteam::printInfos() const
 	IdAndName::printInfos();
 	if (m_boat) {
 		std::cout << "Kanu: " << m_boat->getName() << std::endl;
+	}
+	else {
+		std::cout << "Kein Kanu " << std::endl;
 	}
 	std::cout << "Members: " << std::endl;
 	for(Person * const person : m_members) {
@@ -44,7 +47,7 @@ void Kanuteam::printInfos() const
 	}
 }*/
 
-void Kanuteam::addMember(Person* person)
+void Kanuteam::addElement(Person* person)
 {
 	if (is_moreMembersPossible() && person->is_moreKanuteamsPossible()) {
 		m_members.push_back(person);
@@ -55,7 +58,7 @@ void Kanuteam::addMember(Person* person)
 	}
 }
 
-void Kanuteam::setBoat(Boat* boat)
+void Kanuteam::addElement(Boat* boat)
 {
 	if (!is_boatSet() && !boat->is_KanuteamSet()) {
 		m_boat = boat;
@@ -71,7 +74,7 @@ void Kanuteam::addMember_noTest(Person* person)
 	m_members.push_back(person);
 }
 
-void Kanuteam::removeMember(Person* person)
+void Kanuteam::removeElement(Person* person)
 {
 	for (int i = 0; i < m_members.size(); i++) {
 		if (m_members[i] == person) {
@@ -86,7 +89,7 @@ void Kanuteam::setBoat_noTest(Boat* boat)
 	m_boat = boat;
 }
 
-void Kanuteam::removeBoat()
+void Kanuteam::removeElement(Boat* boat)
 {
 	m_boat = nullptr;
 }

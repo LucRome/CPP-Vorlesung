@@ -11,18 +11,23 @@ Boat::Boat(std::string name, Kanuteam* kanuteam)
 Boat::~Boat()
 {
 	if (m_Kanuteam) {
-		m_Kanuteam->removeBoat();
+		m_Kanuteam->removeElement(this);
 	}
 }
 
 void Boat::printInfos() const
 {
-	std::cout << "----------------" << std::endl << "Kanuteam:" << std::endl;
+	std::cout << "----------------" << std::endl << "Boat:" << std::endl;
 	IdAndName::printInfos();
-	std::cout << "Team: " << m_Kanuteam->getName() << std::endl;
+	if (m_Kanuteam) {
+		std::cout << "Team: " << m_Kanuteam->getName() << std::endl;
+	}
+	else {
+		std::cout << "kein Team " << std::endl;
+	}
 }
 
-void Boat::setKanuteam(Kanuteam* kanuteam)
+void Boat::addElement(Kanuteam* kanuteam)
 {
 	if (!is_KanuteamSet() && !kanuteam->is_boatSet()) {
 		m_Kanuteam = kanuteam;
@@ -38,7 +43,7 @@ void Boat::setKanuteam_noTest(Kanuteam* kanuteam)
 	m_Kanuteam = kanuteam;
 }
 
-void Boat::removeKanuteam()
+void Boat::removeElement(Kanuteam* k)
 {
 	m_Kanuteam = nullptr;
 }

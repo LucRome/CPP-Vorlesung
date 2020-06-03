@@ -2,5 +2,6 @@
 
 
 int main() {
-	Test::testFunktion();
+	Test t = Test();
+	t.testFunktion();
 }
