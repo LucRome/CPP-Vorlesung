@@ -6,20 +6,21 @@ class Person :
 	public IdAndName
 {
 public:
-	Person(std::string name);
-	~Person() override; //Pointer aus anderen Klassen auf diese Klasse müssen in Konstruktor auf nullptr gesetzt werden
+	Person(std::string name); //Konstruktor weißt Name zu
+	~Person() override; //entfernt sich auch aus Klassen die es referenzieren (Kanuteam)
+	//Pointer aus anderen Klassen auf diese Klasse müssen in Konstruktor auf nullptr gesetzt werden
 
-	void printInfos();
-	void addElement(Kanuteam* kanuteam);
-	void removeElement(Kanuteam* kanuteam);
+	void printInfos(); //gibt alle Infos aus
+	void addElement(Kanuteam* kanuteam); //fügt Kanuteam zu sich und sich selber zu Kanuteam hinzu(falls möglich)
+	void removeElement(Kanuteam* kanuteam); //entfernt Kanuteam
 	
-	void addKanuteam_noTest(Kanuteam* kanuteam);
-	bool is_moreKanuteamsPossible() const;
+	void addKanuteam_noTest(Kanuteam* kanuteam); //fügt nur Kanuteam hinzu
+	bool is_moreKanuteamsPossible() const;	//Überprüft ob mehr Kanuteams hinzugefügt werden können
 
 protected:
 	std::vector<Kanuteam*> m_kanuteams;
 
 private:
-	static const int max_Kanuteams;
+	static constexpr int max_Kanuteams = 5;
 };
 

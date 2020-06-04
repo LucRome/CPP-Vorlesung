@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-const int Person::max_Kanuteams = 3;
+//const int Person::max_Kanuteams = 3;
 
 Person::Person(std::string name)
 	:IdAndName(name)

@@ -9,21 +9,13 @@ class Person;
 class IdAndName
 {
 public:
-	IdAndName(std::string name);
+	IdAndName(std::string name);  //weißt Name und ID zu
 	virtual ~IdAndName();
 
-	int getId() const;
-	std::string getName() const;
+	int getId() const;	//gibt Id zurück
+	std::string getName() const;	//gibt Name zurück
 
-	virtual void printInfos() const;
-
-	/*virtual void addElement(Boat* boat); //Falsche Funktionen werden durch Namehiding verborgen
-	virtual void addElement(Person* person);
-	virtual void addElement(Kanuteam* kanuteam);
-	
-	virtual void removeElement(Boat* boat);
-	virtual void removeElement(Person* person);
-	virtual void removeElement(Kanuteam* kanuteam);*/
+	virtual void printInfos() const;	//gibt Id und Name aus
 
 
 protected:

@@ -3,7 +3,7 @@
 #include "Person.h"
 #include <iostream>
 
-const int Kanuteam::max_Members = 5;
+//const int Kanuteam::max_Members = 5;
 
 Kanuteam::Kanuteam(std::string name, Boat* boat)
 	:IdAndName(name)
