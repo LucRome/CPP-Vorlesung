@@ -5,20 +5,7 @@
 
 void Test::testFunktion()
 {
-	/*Person* p1 = new Person("Günther");
-	Person* p2 = new Person("Gustav");
-	Person* p3 = new Person("Jenny");
-	Person* p4 = new Person("Laura");
-	Person* p5 = new Person("Carl");
-
-	Kanuteam* k1 = new Kanuteam("Row");
-	Kanuteam* k2 = new Kanuteam("Bears");
-	Kanuteam* k3 = new Kanuteam("Divers");
-
-	Boat* b1 = new Boat("Unsink");
-	Boat* b2 = new Boat("Eisberg");
-	Boat* b3 = new Boat("Schwimmer");*/
-
+	
 	m_persons = {
 		new Person("Gustav"),
 		new Person("Carl"),

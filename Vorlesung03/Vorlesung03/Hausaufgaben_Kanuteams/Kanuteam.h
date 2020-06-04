@@ -14,8 +14,7 @@ public:
 	Kanuteam(std::string name, Boat* boat = nullptr);
 	~Kanuteam() override;
 	void printInfos()  const override;
-	//void setMembers(std::vector<Person*>);
-	void addElement(Person* person); //mit alias?
+	void addElement(Person* person);
 	void addElement(Boat* boat);
 	void removeElement(Person* person);	
 	void removeElement(Boat* boat);

@@ -10,8 +10,8 @@ public:
 	~Person() override; //Pointer aus anderen Klassen auf diese Klasse müssen in Konstruktor auf nullptr gesetzt werden
 
 	void printInfos();
-	void addElement(Kanuteam* kanuteam) override;
-	void removeElement(Kanuteam* kanuteam) override;
+	void addElement(Kanuteam* kanuteam);
+	void removeElement(Kanuteam* kanuteam);
 	
 	void addKanuteam_noTest(Kanuteam* kanuteam);
 	bool is_moreKanuteamsPossible() const;

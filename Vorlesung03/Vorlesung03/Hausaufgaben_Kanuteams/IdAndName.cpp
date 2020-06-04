@@ -34,26 +34,3 @@ void IdAndName::printInfos() const
 	std::cout << "Id: " << m_id << std::endl;
 }
 
-void IdAndName::addElement(Boat* boat)
-{
-}
-
-void IdAndName::addElement(Person* person)
-{
-}
-
-void IdAndName::addElement(Kanuteam* kanuteam)
-{
-}
-
-void IdAndName::removeElement(Boat* boat)
-{
-}
-
-void IdAndName::removeElement(Person* person)
-{
-}
-
-void IdAndName::removeElement(Kanuteam* kanuteam)
-{
-}

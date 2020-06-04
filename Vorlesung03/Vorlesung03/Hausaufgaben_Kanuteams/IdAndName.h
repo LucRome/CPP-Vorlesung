@@ -17,13 +17,13 @@ public:
 
 	virtual void printInfos() const;
 
-	virtual void addElement(Boat* boat); //Falsche Funktionen werden durch Namehiding verborgen
+	/*virtual void addElement(Boat* boat); //Falsche Funktionen werden durch Namehiding verborgen
 	virtual void addElement(Person* person);
 	virtual void addElement(Kanuteam* kanuteam);
 	
 	virtual void removeElement(Boat* boat);
 	virtual void removeElement(Person* person);
-	virtual void removeElement(Kanuteam* kanuteam);
+	virtual void removeElement(Kanuteam* kanuteam);*/
 
 
 protected:
